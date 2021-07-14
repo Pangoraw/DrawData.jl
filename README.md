@@ -1,2 +1,3 @@
 # DrawData.jl
-:paint: Explore machine learning by drawing your own dataset
+
+Check out this [non-interactive version](https://www.ber.gp/notebooks/draw_data.jl.html)!

@@ -1,0 +1,9 @@
+name = "DrawData"
+authors = ["Paul Berg <paul@plutojl.org>"]
+uuid = "b0119bba-4e1a-47eb-a42b-c60ee6c385b2"
+
+version = "0.0.1"
+
+[deps]
+
+[compat]

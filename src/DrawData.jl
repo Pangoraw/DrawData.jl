@@ -1,7 +1,7 @@
 module DrawData
 
-include("./draw_data.jl")
+include("./dataset.jl")
 
-export DrawData
+export Dataset
 
 end # module DrawData

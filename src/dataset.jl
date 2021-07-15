@@ -17,7 +17,7 @@ end
 md"""
 # DrawData.jl
 
-`DrawData` is a `@bind` widget to draw datasets and use them directly in Pluto.jl!
+`Dataset` is a `@bind` widget to draw datasets and use them directly in Pluto.jl!
 
 ### References
 
@@ -212,15 +212,15 @@ end |> join) |> HTML
 
 # ╔═╡ 3cf5257e-e485-11eb-2d17-2f8d36eb5975
 begin
-	Base.@kwdef struct DrawData
+	Base.@kwdef struct Dataset
 		width::Int=300
 		height::Int=150
 
     classes::Set{Int}=Set(1)
 	end
 
-	Base.get(::DrawData) = []
-	function Base.show(io::IO, m::MIME"text/html", dd::DrawData)
+	Base.get(::Dataset) = []
+	function Base.show(io::IO, m::MIME"text/html", dd::Dataset)
 		classes_options = map(enumerate(sort(collect(dd.classes)))) do t
 			i, class = t
 			color = get_color(i)
@@ -253,7 +253,7 @@ macro only_in_pluto(ex)
 end
 
 # ╔═╡ f80ee820-7691-4b3e-bc1a-0a190aa3fc77
-@only_in_pluto @bind dataset DrawData(classes=Set([1,2,3]))
+@only_in_pluto @bind dataset Dataset(classes=Set([1,2,3]))
 
 # ╔═╡ 449a8b2a-d504-458f-9e64-f0d184ef4523
 @only_in_pluto dataset

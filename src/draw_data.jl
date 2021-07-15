@@ -282,7 +282,7 @@ end
 @only_in_pluto using Plots
 
 # ╔═╡ 200f5a6c-a1fc-477c-a230-cbc5be8653ee
-function show_pretty_source(code, language)
+@only_in_pluto function show_pretty_source(code, language)
 	pretty_code = Markdown.parse("```$language\n$code\n```") |> Markdown.html
 	capital_language = uppercase(language[1]) * language[2:end]
 
@@ -295,10 +295,10 @@ function show_pretty_source(code, language)
 end;
 
 # ╔═╡ 09758355-f91e-4dd7-a1ba-d8f17d3716a3
-show_pretty_source(js_code, "javascript")
+@only_in_pluto show_pretty_source(js_code, "javascript")
 
 # ╔═╡ e56a7ff3-308d-46c3-961b-7de4d9c21996
-show_pretty_source(css_code, "css")
+@only_in_pluto show_pretty_source(css_code, "css")
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
